@@ -9,6 +9,8 @@ local GetCoordinates = Instance.new("TextButton")
 local UICorner_2 = Instance.new("UICorner")
 local Copy = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
+local Madeby = Instance.new("TextLabel")
+local UICorner_4 = Instance.new("UICorner")
 
 --Properties:
 
@@ -68,9 +70,21 @@ Copy.TextSize = 25.000
 
 UICorner_3.Parent = Copy
 
+Madeby.Name = "Madeby"
+Madeby.Parent = Frame
+Madeby.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Madeby.Position = UDim2.new(0.214285716, 0, 0.0364583321, 0)
+Madeby.Size = UDim2.new(0, 200, 0, 17)
+Madeby.Font = Enum.Font.SciFi
+Madeby.Text = "Made by RedDeath6677"
+Madeby.TextColor3 = Color3.fromRGB(0, 0, 0)
+Madeby.TextSize = 14.000
+
+UICorner_4.Parent = Madeby
+
 -- Scripts:
 
-local function VLGXPOU_fake_script() -- CloseScript.LocalScript 
+local function FMIJ_fake_script() -- CloseScript.LocalScript 
 	local script = Instance.new('LocalScript', CloseScript)
 
 	local Frame = script.Parent.Parent
@@ -79,20 +93,20 @@ local function VLGXPOU_fake_script() -- CloseScript.LocalScript
 		Frame.Visible = false
 	end)
 end
-coroutine.wrap(VLGXPOU_fake_script)()
-local function NTBUB_fake_script() -- GetCoordinates.LocalScript 
+coroutine.wrap(FMIJ_fake_script)()
+local function OGNTKIQ_fake_script() -- GetCoordinates.LocalScript 
 	local script = Instance.new('LocalScript', GetCoordinates)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.CoordText.Text = tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
 	end)
 end
-coroutine.wrap(NTBUB_fake_script)()
-local function KCYFAX_fake_script() -- Copy.LocalScript 
+coroutine.wrap(OGNTKIQ_fake_script)()
+local function KIURF_fake_script() -- Copy.LocalScript 
 	local script = Instance.new('LocalScript', Copy)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		setclipboard(script.Parent.Parent.CoordText.Text)
 	end)
 end
-coroutine.wrap(KCYFAX_fake_script)()
+coroutine.wrap(KIURF_fake_script)()
