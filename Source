@@ -47,7 +47,7 @@ CoordText.TextScaled = true
 CoordText.TextColor3 = Color3.fromRGB(0, 0, 0)
 CoordText.TextSize = 30.000
 
-UICorner.Parent = CoordText
+UICorner_2.Parent = CoordText
 
 GetCoordinates.Name = "GetCoordinates"
 GetCoordinates.Parent = Frame
@@ -59,7 +59,7 @@ GetCoordinates.Text = "Get Coordinates"
 GetCoordinates.TextColor3 = Color3.fromRGB(0, 0, 0)
 GetCoordinates.TextSize = 16.000
 
-UICorner_2.Parent = GetCoordinates
+UICorner_3.Parent = GetCoordinates
 
 Copy.Name = "Copy"
 Copy.Parent = Frame
@@ -71,7 +71,7 @@ Copy.Text = "Copy"
 Copy.TextColor3 = Color3.fromRGB(0, 0, 0)
 Copy.TextSize = 25.000
 
-UICorner_3.Parent = Copy
+UICorner_4.Parent = Copy
 
 Madeby.Name = "Madeby"
 Madeby.Parent = Frame
@@ -83,7 +83,7 @@ Madeby.Text = "Made by red_Jeff"
 Madeby.TextColor3 = Color3.fromRGB(0, 0, 0)
 Madeby.TextSize = 14.000
 
-UICorner_4.Parent = Madeby
+UICorner_5.Parent = Madeby
 
 -- Scripts:
 
