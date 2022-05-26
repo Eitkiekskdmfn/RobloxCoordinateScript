@@ -24,6 +24,8 @@ Frame.Size = UDim2.new(0, 350, 0, 192)
 Frame.Active = true
 Frame.Draggable = true
 
+UICorner.Parent = Frame
+
 CloseScript.Name = "CloseScript"
 CloseScript.Parent = Frame
 CloseScript.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
@@ -41,6 +43,7 @@ CoordText.Position = UDim2.new(0.0971428603, 0, 0.166666672, 0)
 CoordText.Size = UDim2.new(0, 279, 0, 50)
 CoordText.Font = Enum.Font.SourceSans
 CoordText.Text = "Coordinates text"
+CoordText.TextScaled = true
 CoordText.TextColor3 = Color3.fromRGB(0, 0, 0)
 CoordText.TextSize = 30.000
 
@@ -76,7 +79,7 @@ Madeby.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Madeby.Position = UDim2.new(0.214285716, 0, 0.0364583321, 0)
 Madeby.Size = UDim2.new(0, 200, 0, 17)
 Madeby.Font = Enum.Font.SciFi
-Madeby.Text = "Made by RedDeath6677"
+Madeby.Text = "Made by red_Jeff"
 Madeby.TextColor3 = Color3.fromRGB(0, 0, 0)
 Madeby.TextSize = 14.000
 
