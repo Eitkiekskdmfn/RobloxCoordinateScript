@@ -1,0 +1,143 @@
+local ScreenGui = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Madeby = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local CloseGui = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local CoordText = Instance.new("TextLabel")
+local GetCoordinates = Instance.new("TextButton")
+local Copy = Instance.new("TextButton")
+local OpenGui = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = ScreenGui
+MainFrame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+MainFrame.Position = UDim2.new(0.5, -143, 0.5, -85)
+MainFrame.Size = UDim2.new(0, 286, 0, 171)
+MainFrame.Visible = false
+MainFrame.Active = true
+MainFrame.Draggable = true
+
+UICorner.Parent = MainFrame
+
+Madeby.Name = "Madeby"
+Madeby.Parent = MainFrame
+Madeby.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Madeby.Size = UDim2.new(0, 286, 0, 28)
+Madeby.Font = Enum.Font.SciFi
+Madeby.Text = "CFrame Grabber | Made by red_Jeff"
+Madeby.TextColor3 = Color3.fromRGB(255, 255, 255)
+Madeby.TextSize = 14.000
+
+UICorner_2.Parent = Madeby
+
+CloseGui.Name = "CloseGui"
+CloseGui.Parent = MainFrame
+CloseGui.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+CloseGui.Position = UDim2.new(0.888111889, 0, 0, 0)
+CloseGui.Size = UDim2.new(0, 32, 0, 28)
+CloseGui.Font = Enum.Font.SourceSans
+CloseGui.Text = "X"
+CloseGui.TextColor3 = Color3.fromRGB(0, 0, 0)
+CloseGui.TextScaled = true
+CloseGui.TextSize = 14.000
+CloseGui.TextWrapped = true
+
+UICorner_3.Parent = CloseGui
+
+CoordText.Name = "CoordText"
+CoordText.Parent = MainFrame
+CoordText.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+CoordText.BorderColor3 = Color3.fromRGB(255, 255, 255)
+CoordText.Position = UDim2.new(0.150349647, 0, 0.216374263, 0)
+CoordText.Size = UDim2.new(0, 200, 0, 50)
+CoordText.Font = Enum.Font.SourceSans
+CoordText.Text = ""
+CoordText.TextColor3 = Color3.fromRGB(255, 255, 255)
+CoordText.TextScaled = true
+CoordText.TextSize = 14.000
+CoordText.TextWrapped = true
+
+GetCoordinates.Name = "GetCoordinates"
+GetCoordinates.Parent = MainFrame
+GetCoordinates.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+GetCoordinates.BorderColor3 = Color3.fromRGB(255, 255, 255)
+GetCoordinates.Position = UDim2.new(0.0804195777, 0, 0.578947365, 0)
+GetCoordinates.Size = UDim2.new(0, 107, 0, 50)
+GetCoordinates.Font = Enum.Font.SciFi
+GetCoordinates.Text = "Get Coordinates"
+GetCoordinates.TextColor3 = Color3.fromRGB(255, 255, 255)
+GetCoordinates.TextSize = 15.000
+GetCoordinates.TextWrapped = true
+
+Copy.Name = "Copy"
+Copy.Parent = MainFrame
+Copy.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Copy.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Copy.Position = UDim2.new(0.566433549, 0, 0.578947365, 0)
+Copy.Size = UDim2.new(0, 107, 0, 50)
+Copy.Font = Enum.Font.SourceSans
+Copy.Text = "Copy"
+Copy.TextColor3 = Color3.fromRGB(255, 255, 255)
+Copy.TextSize = 25.000
+Copy.TextWrapped = true
+
+OpenGui.Name = "OpenGui"
+OpenGui.Parent = ScreenGui
+OpenGui.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+OpenGui.Position = UDim2.new(0.5, -70, 0, 0)
+OpenGui.Size = UDim2.new(0, 141, 0, 37)
+OpenGui.Font = Enum.Font.SciFi
+OpenGui.Text = "Open CFrame Tp Coord Tool"
+OpenGui.TextColor3 = Color3.fromRGB(255, 255, 255)
+OpenGui.TextScaled = true
+OpenGui.TextSize = 14.000
+OpenGui.TextWrapped = true
+
+UICorner_4.Parent = OpenGui
+
+-- Scripts:
+
+local function HSMCF_fake_script() -- CloseGui.LocalScript 
+	local script = Instance.new('LocalScript', CloseGui)
+
+	local Frame = script.Parent.Parent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Frame.Visible = false
+	end)
+end
+coroutine.wrap(HSMCF_fake_script)()
+local function VWVRIV_fake_script() -- GetCoordinates.LocalScript 
+	local script = Instance.new('LocalScript', GetCoordinates)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.pos.Text = tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
+	end)
+end
+coroutine.wrap(VWVRIV_fake_script)()
+local function KDNR_fake_script() -- Copy.LocalScript 
+	local script = Instance.new('LocalScript', Copy)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		setclipboard(script.Parent.Parent.pos.Text)
+	end)
+end
+coroutine.wrap(KDNR_fake_script)()
+local function ZLGXLI_fake_script() -- OpenGui.LocalScript 
+	local script = Instance.new('LocalScript', OpenGui)
+
+	local Frame = script.Parent.Parent.MainFrame
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Frame.Visible = true
+	end)
+end
+coroutine.wrap(ZLGXLI_fake_script)()
