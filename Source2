@@ -58,7 +58,7 @@ CoordText.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 CoordText.BorderColor3 = Color3.fromRGB(255, 255, 255)
 CoordText.Position = UDim2.new(0.150349647, 0, 0.216374263, 0)
 CoordText.Size = UDim2.new(0, 200, 0, 50)
-CoordText.Font = Enum.Font.SourceSans
+CoordText.Font = Enum.Font.SciFi
 CoordText.Text = ""
 CoordText.TextColor3 = Color3.fromRGB(255, 255, 255)
 CoordText.TextScaled = true
@@ -100,12 +100,14 @@ OpenGui.TextColor3 = Color3.fromRGB(255, 255, 255)
 OpenGui.TextScaled = true
 OpenGui.TextSize = 14.000
 OpenGui.TextWrapped = true
+OpenGui.Active = true
+OpenGui.Draggable = true
 
 UICorner_4.Parent = OpenGui
 
 -- Scripts:
 
-local function HSMCF_fake_script() -- CloseGui.LocalScript 
+local function DUHBLVR_fake_script() -- CloseGui.LocalScript 
 	local script = Instance.new('LocalScript', CloseGui)
 
 	local Frame = script.Parent.Parent
@@ -114,24 +116,24 @@ local function HSMCF_fake_script() -- CloseGui.LocalScript
 		Frame.Visible = false
 	end)
 end
-coroutine.wrap(HSMCF_fake_script)()
-local function VWVRIV_fake_script() -- GetCoordinates.LocalScript 
+coroutine.wrap(DUHBLVR_fake_script)()
+local function CEYQRER_fake_script() -- GetCoordinates.LocalScript 
 	local script = Instance.new('LocalScript', GetCoordinates)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.pos.Text = tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
+		script.Parent.Parent.CoordText.Text = tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
 	end)
 end
-coroutine.wrap(VWVRIV_fake_script)()
-local function KDNR_fake_script() -- Copy.LocalScript 
+coroutine.wrap(CEYQRER_fake_script)()
+local function PBPGIBG_fake_script() -- Copy.LocalScript 
 	local script = Instance.new('LocalScript', Copy)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		setclipboard(script.Parent.Parent.pos.Text)
+		setclipboard(script.Parent.Parent.CoordText.Text)
 	end)
 end
-coroutine.wrap(KDNR_fake_script)()
-local function ZLGXLI_fake_script() -- OpenGui.LocalScript 
+coroutine.wrap(PBPGIBG_fake_script)()
+local function MUHZINC_fake_script() -- OpenGui.LocalScript 
 	local script = Instance.new('LocalScript', OpenGui)
 
 	local Frame = script.Parent.Parent.MainFrame
@@ -140,4 +142,4 @@ local function ZLGXLI_fake_script() -- OpenGui.LocalScript
 		Frame.Visible = true
 	end)
 end
-coroutine.wrap(ZLGXLI_fake_script)()
+coroutine.wrap(MUHZINC_fake_script)()
